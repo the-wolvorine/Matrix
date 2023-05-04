@@ -1,5 +1,5 @@
 # Matrix Operations Parser
-This repository contains a matrix operations parser that can parse basic matrix operations.
+This repository contains a simple matrix operations parser that can parse basic matrix operations using pthon.
 
 ## Requirements
 - Python 3.6+
@@ -7,8 +7,22 @@ This repository contains a matrix operations parser that can parse basic matrix 
 
 ## How to run
 To use the matrix operations parser, run the matrix_parser.py file and enter a matrix operation when prompted. The parser will parse the operation and print the parsed output.
+    
+## Supported Operations To Execute
+The grammar supports the following matrix operations:
+- assignment: `matrix matrix_name is matrix_definition`
+- addition: `matrix_addition matrix_name to matrix_name`
+- subtraction: `matrix_subtraction matrix_name from matrix_name`
+- multiplication: `matrix_multiplication matrix_name with matrix_name`
+- transpose: `matrix_transpose matrix_name`
+- largest value: `matrix_largest_value matrix_name`
+- smallest value: `matrix_smallest_value matrix_name`
+- row sum: `matrix_row_sum matrix_name row_number`
+- column sum: `matrix_column_sum matrix_name column_number`
+- row multiplication: `matrix_row_multiplication matrix_name row_number literal_value`
 
 ## Example
+Here is the example showing how to assign a matrix to a variable(matrix_name).
 ```
 python matrix_parser.py
 Enter a input: matrix A is [[1, 2], [3, 4]];
@@ -24,18 +38,7 @@ statement
         literal_value 3
         literal_value 4
     end_statement
-```      
-## Supported Operations To Execute
-The grammar supports the following matrix operations:
-- addition: `matrix add matrix`
-- subtraction: `matrix subtract matrix`
-- multiplication: `matrix multiply matrix`
-- transpose: `matrix transpose matrix`
-- largest value: `matrix largest matrix`
-- smallest value: `matrix smallest matrix`
-- row sum: `matrix rowsum matrix`
-- column sum: `matrix columnsum matrix`
-- row multiplication: `matrix rowmultiply matrix`
+```  
 
 ## Conclusion
 This code defines a grammar for parsing matrix operations with support for basic matrix operations like addition, subtraction, multiplication, transpose, largest or smallest value in a matrix, row or column sum and row multiplications etc. 
